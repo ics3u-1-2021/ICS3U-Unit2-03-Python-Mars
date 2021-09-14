@@ -5,6 +5,9 @@
 # This program calculates the time to Mars
 
 
+import constants
+
+
 def main():
     # this function calculates the time to Mars
 
@@ -13,10 +16,14 @@ def main():
     distance = int(input("Enter distance to mars (m): "))
 
     # process
-    time = distance / 299792458
+    time = distance / constants.SPEED_OF_LIGHT
 
     # output
-    print("If mars is {0} m away it will take you {1} seconds to get there.".format(distance, time))
+    print(
+        "If mars is {0} m away it will take you {1} seconds to get there.".format(
+            distance, time
+        )
+    )
     print("\nDone.")
 
 
